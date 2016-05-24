@@ -1,10 +1,12 @@
-
+</h1><div class="main">
+  <div class="container">
+    <h1>Restaurants</h1>
 <% if @restaurants.any? %>
   <% @restaurants.each do |restaurant| %>
     <%= link_to restaurant.name, restaurant_path(restaurant) %>
     <% restaurant.reviews.each do |review| %>
     <br>
-    Review for <%=restaurant.name %>:<%= review.thoughts %>
+    Review for <%=restaurant.name %>: <%= review.thoughts %>
     <br>
     Given rating: <%= review.rating %>
     <br>
@@ -23,3 +25,5 @@
 <% end %>
   <br>
 <a href="/restaurants/new">add a restaurant</a>
+</div>
+</div>

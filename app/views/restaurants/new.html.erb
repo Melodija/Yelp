@@ -1,4 +1,6 @@
-<% if @restaurant.errors.any? %>
+</h1><div class="main">
+  <div class="container">
+    <% if @restaurant.errors.any? %>
   <section id="errors" >
     <h2> <%= pluralize(@restaurant.errors.count, "error") %> prohibited this restaurant from being saved: </h2>
     <ul>
@@ -15,3 +17,5 @@
   <%= f.text_field :description %>
   <%= f.submit %>
 <% end %>
+</div>
+</div>
