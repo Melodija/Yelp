@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'haml'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.6'
@@ -45,3 +46,7 @@ group :development do
   gem 'spring'
 end
 
+group :test do
+  gem 'rspec-rails'
+  gem 'capybara'
+end
