@@ -1,3 +1,4 @@
+
 </h1><div class="main">
   <div class="container">
     <% if @restaurant.errors.any? %>
@@ -10,6 +11,7 @@
   </ul>
   </section>
     <% end %>
+  
       <%= form_for @restaurant do |f| %>
         <%= f.label :name %>
         <%= f.text_field :name %>
@@ -17,5 +19,6 @@
         <%= f.text_field :description %>
         <%= f.submit %>
       <% end %>
+
   </div>
 </div>
