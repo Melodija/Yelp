@@ -1,11 +1,11 @@
 </h1><div class="main">
   <div class="container">
     <%= form_for [@restaurant, @review] do |f| %>
-  <%= f.label :thoughts %>
-  <%= f.text_area :thoughts %>
-  <%= f.label :rating %>
-  <%= f.select :rating, (1..5) %>
-  <%= f.submit 'Leave Review' %>
-<% end %>
-</div>
+      <%= f.label :thoughts %>
+      <%= f.text_area :thoughts %>
+      <%= f.label :rating %>
+      <%= f.select :rating, (1..5) %>
+      <%= f.submit 'Leave Review' %>
+    <% end %>
+  </div>
 </div>
