@@ -16,4 +16,8 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
     redirect_to root_path
   end
 
+  if current_user.has_reviewed? @restaurant
+    raise "You have already left a review for this restaurant!"
+  end
+
 end
