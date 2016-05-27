@@ -38,6 +38,8 @@ group :test do
   gem 'rspec-rails'
   gem 'capybara'
   gem 'rspec-collection_matchers'
+  gem 'shoulda'
+  gem 'shoulda-matchers'
 end
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
