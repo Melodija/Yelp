@@ -16,7 +16,7 @@
               <br>
               <%= link_to "Delete #{restaurant.name}", restaurant_path(restaurant), method: :delete %>
             <br>
-          <%= link_to "Review #{restaurant.name}", new_restaurant_review_path(restaurant) %>
+          <%= link_to "Review #{restaurant.name}", new_restaurant_review_path(restaurant)  %> 
         <br>
       <% end %>
       <% else %>
