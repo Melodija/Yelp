@@ -7,4 +7,13 @@ module ApplicationHelper
     fill_in('Password confirmation', with: 'testtest')
     click_button('Sign up')
   end
+
+  def sign_up_add_restaurant
+    sign_up
+    click_link 'add a restaurant'
+    fill_in 'Name', with: 'KFC'
+    click_button 'Create Restaurant'
+    expect(page).to have_content ('KFC')
+    expect(current_path).to eq '/restaurants'
+  end
 end

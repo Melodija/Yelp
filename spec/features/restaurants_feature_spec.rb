@@ -53,10 +53,13 @@ end
       expect(current_path).to eq "/restaurants/#{kfc.id}"
     end
   end
+
   context 'editing restaurants' do
-    before {Restaurant.create name: 'KFC', description: 'Nice' }
+    before do
+      sign_up_add_restaurant
+    end
+
     scenario 'let a user edit a restaurant' do
-      sign_up
       click_link 'Edit KFC'
       fill_in 'Name', with: 'Kentucky Fried Chicken'
       fill_in 'Description', with: 'Nice'
@@ -68,15 +71,11 @@ end
   end
 
   context 'deleting restaurants' do
-    before { Restaurant.create name: 'KFC', description: 'Nice'  }
+    before do
+      sign_up_add_restaurant
+    end
 
     scenario 'removes a restaurant when a user clicks a delete link' do
-      visit '/'
-      click_link('Sign up')
-      fill_in('Email', with: 'test@example.com')
-      fill_in('Password', with: 'testtest')
-      fill_in('Password confirmation', with: 'testtest')
-      click_button('Sign up')
       click_link 'Delete KFC'
       expect(page).to_not have_content 'KFC'
       expect(page).to_not have_content 'Nice'
