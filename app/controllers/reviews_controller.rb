@@ -16,8 +16,6 @@ class ReviewsController < ApplicationController
             render :new
         end
       end
-      @restaurant.reviews.create(review_params)
-      # redirect_to restaurants_path
   end
   def review_params
    params.require(:review).permit(:thoughts, :rating)
